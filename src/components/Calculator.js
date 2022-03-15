@@ -23,7 +23,7 @@ class Calculator extends React.Component {
 
   render() {
     const { count } = this.state;
-    const buttons = [['AC', '+/-', '%', '/'], ['7', '8', '9', 'x'], ['4', '5', '6', '-'], ['1', '2', '3', '+'], ['0', '.', '=']];
+    const buttons = [['AC', '+/-', '%', '÷'], ['7', '8', '9', 'x'], ['4', '5', '6', '-'], ['1', '2', '3', '+'], ['0', '.', '=']];
     const determineColSpan = (row, ind) => {
       if (row.length < 4 && ind === 0) {
         return '2';
