@@ -60,7 +60,6 @@ class Calculator extends React.Component {
                       className={determineBgColor(row, ind)}
                     >
                       <Button variant={determineButtonVar(row, ind)} className="w-100">
-                        {' '}
                         {butt}
                       </Button>
                     </td>
