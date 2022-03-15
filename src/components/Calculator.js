@@ -1,8 +1,3 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable-next-line react/jsx-key */
-
 import React from 'react';
 import { Container, Table, Button } from 'react-bootstrap';
 
@@ -55,11 +50,15 @@ class Calculator extends React.Component {
               </tr>
 
               {buttons.map((row) => (
-                <tr>
+                <tr key={row[0]}>
 
                   {row.map((butt, ind) => (
 
-                    <td colSpan={determineColSpan(row, ind)} className={determineBgColor(row, ind)}>
+                    <td
+                      key={butt}
+                      colSpan={determineColSpan(row, ind)}
+                      className={determineBgColor(row, ind)}
+                    >
                       <Button variant={determineButtonVar(row, ind)} className="w-100">
                         {' '}
                         {butt}
