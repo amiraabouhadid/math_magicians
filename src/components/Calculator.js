@@ -23,30 +23,26 @@ class Calculator extends React.Component {
     } = this.state;
 
     const displayString = (total, operation, next) => {
-      // 8 diff combos (000 and 010 have the same outcome)
-      // 101 is unncessary
-      // 100
       if (total && !operation && !next) {
         return total;
       }
-      // 001
+
       if (!total && !operation && next) {
         return next;
       }
-      // 110
+
       if (total && operation && !next) {
         return total + operation;
       }
-      // 011
+
       if (!total && operation && next) {
         return total + operation + next;
       }
 
-      // 111
       if (total && operation && next) {
         return total + operation + next;
       }
-      // 000 & 010
+
       return '0';
     };
     const buttons = [['AC', '+/-', '%', '÷'], ['7', '8', '9', 'x'], ['4', '5', '6', '-'], ['1', '2', '3', '+'], ['0', '.', '=']];
