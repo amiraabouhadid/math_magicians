@@ -31,6 +31,7 @@ class Calculator extends React.Component {
       }
       return 'bg-light';
     };
+
     const determineButtonVar = (row, ind) => {
       if (ind === row.length - 1) {
         return 'warning';
