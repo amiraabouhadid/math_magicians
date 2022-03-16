@@ -13,7 +13,6 @@ class Calculator extends React.Component {
       total: 0,
       next: null,
       operation: null,
-
     };
   }
 
