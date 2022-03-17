@@ -1,17 +1,12 @@
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable no-useless-constructor */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Display extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (<p>{this.props.text}</p>);
-  }
-}
+const Display = (props) => {
+  const { text } = props;
+  return (
+    <p>{text}</p>
+  );
+};
+Display.propTypes = { text: PropTypes.string.isRequired };
 
 export default Display;
