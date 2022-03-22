@@ -64,8 +64,8 @@ const Calculator = () => {
 
   return (
     <Container fluid>
-      <Container className="p-5 my-5">
-        <Table bordered className="p-5">
+      <Container className="py-3">
+        <Table bordered className="">
 
           <tbody>
             <tr>
