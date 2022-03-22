@@ -19,8 +19,7 @@ class Quote extends React.Component {
           quote: response.quote,
           author: response.author,
         });
-      })
-      .catch((err) => console.error(err));
+      });
   }
 
   render() {
