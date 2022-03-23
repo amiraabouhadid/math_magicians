@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculator page component renders correctly 1`] = `
+<div
+  className=" container-fluid"
+>
+  <div
+    className="row p-4 m-5"
+  >
+    <h3
+      className="col-4"
+    >
+      Lets do some math!
+    </h3>
+    <div
+      className="col-8"
+    >
+      <div
+        className="container-fluid"
+      >
+        <div
+          className="py-2 container"
+        >
+          <table
+            className="table table-bordered"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="bg-secondary p-4 text-end text-white w-100"
+                  colSpan="4"
+                >
+                  <p>
+                    0
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="AC"
+                  >
+                    AC
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="+/-"
+                  >
+                    +/-
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="%"
+                  >
+                    %
+                  </button>
+                </td>
+                <td
+                  className="bg-warning"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-warning"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="÷"
+                  >
+                    ÷
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="7"
+                  >
+                    7
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="8"
+                  >
+                    8
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="9"
+                  >
+                    9
+                  </button>
+                </td>
+                <td
+                  className="bg-warning"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-warning"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="x"
+                  >
+                    x
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="4"
+                  >
+                    4
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="5"
+                  >
+                    5
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="6"
+                  >
+                    6
+                  </button>
+                </td>
+                <td
+                  className="bg-warning"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-warning"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="-"
+                  >
+                    -
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="1"
+                  >
+                    1
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="2"
+                  >
+                    2
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="3"
+                  >
+                    3
+                  </button>
+                </td>
+                <td
+                  className="bg-warning"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-warning"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="+"
+                  >
+                    +
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="bg-light"
+                  colSpan="2"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="0"
+                  >
+                    0
+                  </button>
+                </td>
+                <td
+                  className="bg-light"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-light"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="."
+                  >
+                    .
+                  </button>
+                </td>
+                <td
+                  className="bg-warning"
+                  colSpan="1"
+                >
+                  <button
+                    className="w-100 btn btn-warning"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                    value="="
+                  >
+                    =
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`home page component renders correctly 1`] = `
+<div
+  className="p-5"
+>
+  <h2>
+    Welcome to our page!
+  </h2>
+  <p>
+    Lorem ipsum odor amet, consectetuer adipiscing elit. Posuere curae molestie lorem nisl euismod nam ipsum. Ac orci adipiscing parturient mauris, quisque sem placerat varius sollicitudin. Convallis euismod curabitur vel rhoncus platea porttitor arcu imperdiet. Eu turpis quam venenatis egestas ex tristique. Nascetur a phasellus mauris mattis libero natoque. Facilisi in mus ornare phasellus sit eu, urna imperdiet vehicula.
+  </p>
+  <p>
+    Lorem ipsum odor amet, consectetuer adipiscing elit. Sociosqu malesuada eros nisl suspendisse elit. Porttitor turpis varius tempor vestibulum natoque ridiculus. Consectetur condimentum ut suscipit turpis netus augue. Phasellus augue nullam vivamus dictum sollicitudin vestibulum? Eget a a facilisi fringilla pharetra condimentum augue mauris.
+  </p>
+</div>
+`;
+
+exports[`quote page component renders correctly 1`] = `
+<div
+  className="m-5 p-5 "
+>
+  <h4
+    className="p-5"
+  >
+    
+    <span
+      className="mx-3"
+    >
+      —
+    </span>
+    
+  </h4>
+</div>
+`;
