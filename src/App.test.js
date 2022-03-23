@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
 import operate from './logic/operate';
 import calculate from './logic/calculate';
 import Home from './pages/Home';
 import CalculatePage from './pages/CalculatePage';
 import Quote from './pages/Quote';
+import App from './App';
 
 describe('operate mathematical functions', () => {
   test('adds 1 + 2 to equal 3', () => {
@@ -34,70 +36,114 @@ describe('operate mathematical functions', () => {
 });
 describe('calculate logic ', () => {
   test('AC button', () => {
-    expect(calculate({ total: 0, next: null, operation: null }, 'AC')).toStrictEqual({ total: 0, next: null, operation: null });
+    expect(
+      calculate({ total: 0, next: null, operation: null }, 'AC')
+    ).toStrictEqual({ total: 0, next: null, operation: null });
   });
   test('= button in case of operation and next value', () => {
-    expect(calculate({ total: 0, next: '3', operation: '+' }, '=')).toStrictEqual({ total: '3', next: null, operation: null });
+    expect(
+      calculate({ total: 0, next: '3', operation: '+' }, '=')
+    ).toStrictEqual({ total: '3', next: null, operation: null });
   });
   test('= button in case of no operation', () => {
-    expect(calculate({ total: 0, next: null, operation: null }, '=')).toStrictEqual({ });
+    expect(
+      calculate({ total: 0, next: null, operation: null }, '=')
+    ).toStrictEqual({});
   });
   test('+/- button in case of next value', () => {
-    expect(calculate({ total: 0, next: '3', operation: null }, '+/-')).toStrictEqual({ total: 0, next: '-3', operation: null });
+    expect(
+      calculate({ total: 0, next: '3', operation: null }, '+/-')
+    ).toStrictEqual({ total: 0, next: '-3', operation: null });
   });
   test('+/- button in case of total ', () => {
-    expect(calculate({ total: '1', next: null, operation: null }, '+/-')).toStrictEqual({ total: '-1', next: null, operation: null });
+    expect(
+      calculate({ total: '1', next: null, operation: null }, '+/-')
+    ).toStrictEqual({ total: '-1', next: null, operation: null });
   });
   test('+/- button in case of no total or next value', () => {
-    expect(calculate({ total: 0, next: null, operation: null }, '+/-')).toStrictEqual({ });
+    expect(
+      calculate({ total: 0, next: null, operation: null }, '+/-')
+    ).toStrictEqual({});
   });
   test('Number button in case of 0 and next is 0 ', () => {
-    expect(calculate({ total: '0', next: '0', operation: null }, '0')).toStrictEqual({ });
+    expect(
+      calculate({ total: '0', next: '0', operation: null }, '0')
+    ).toStrictEqual({});
   });
   test('Number button in case of number with existing next value and operation ', () => {
-    expect(calculate({ total: 0, next: '3', operation: '+' }, '3')).toStrictEqual({ total: 0, next: '33', operation: '+' });
+    expect(
+      calculate({ total: 0, next: '3', operation: '+' }, '3')
+    ).toStrictEqual({ total: 0, next: '33', operation: '+' });
   });
   test('Number button in case of number with existing operation but no next value', () => {
-    expect(calculate({ total: 0, next: null, operation: '+' }, '3')).toStrictEqual({ total: 0, next: '3', operation: '+' });
+    expect(
+      calculate({ total: 0, next: null, operation: '+' }, '3')
+    ).toStrictEqual({ total: 0, next: '3', operation: '+' });
   });
   test('Number button in case of number with existing next value and no operation', () => {
-    expect(calculate({ total: 0, next: '3', operation: null }, '3')).toStrictEqual({ total: 0, next: '33' });
+    expect(
+      calculate({ total: 0, next: '3', operation: null }, '3')
+    ).toStrictEqual({ total: 0, next: '33' });
   });
   test('Number button in case of number with no  next value and no operation', () => {
-    expect(calculate({ total: 0, next: null, operation: null }, '3')).toStrictEqual({ total: 0, next: '3' });
+    expect(
+      calculate({ total: 0, next: null, operation: null }, '3')
+    ).toStrictEqual({ total: 0, next: '3' });
   });
   test('. button when no total, next or operation is given', () => {
-    expect(calculate({ total: 0, next: null, operation: null }, '.')).toStrictEqual({ total: '0.' });
+    expect(
+      calculate({ total: 0, next: null, operation: null }, '.')
+    ).toStrictEqual({ total: '0.' });
   });
   test('. button when only next  is given and does not include .', () => {
-    expect(calculate({ total: 0, next: '3', operation: null }, '.')).toStrictEqual({ total: 0, next: '3.', operation: null });
+    expect(
+      calculate({ total: 0, next: '3', operation: null }, '.')
+    ).toStrictEqual({ total: 0, next: '3.', operation: null });
   });
   test('. button when only next  is given and does include .', () => {
-    expect(calculate({ total: 0, next: '3.', operation: null }, '.')).toStrictEqual({ total: 0, next: '3.', operation: null });
+    expect(
+      calculate({ total: 0, next: '3.', operation: null }, '.')
+    ).toStrictEqual({ total: 0, next: '3.', operation: null });
   });
   test('. button when only operation is given', () => {
-    expect(calculate({ total: 0, next: null, operation: '+' }, '.')).toStrictEqual({ next: '0.' });
+    expect(
+      calculate({ total: 0, next: null, operation: '+' }, '.')
+    ).toStrictEqual({ next: '0.' });
   });
   test('. button when only total is given and does not include .', () => {
-    expect(calculate({ total: '3', next: null, operation: null }, '.')).toStrictEqual({ total: '3.' });
+    expect(
+      calculate({ total: '3', next: null, operation: null }, '.')
+    ).toStrictEqual({ total: '3.' });
   });
   test('. button when only total is given and includes .', () => {
-    expect(calculate({ total: '3.', next: null, operation: null }, '.')).toStrictEqual({ });
+    expect(
+      calculate({ total: '3.', next: null, operation: null }, '.')
+    ).toStrictEqual({});
   });
   test("User pressed an operation after pressing '='", () => {
-    expect(calculate({ total: '3.', next: null, operation: null }, '+')).toStrictEqual({ total: '3.', next: null, operation: '+' });
+    expect(
+      calculate({ total: '3.', next: null, operation: null }, '+')
+    ).toStrictEqual({ total: '3.', next: null, operation: '+' });
   });
   test('User pressed an operation button and there is an existing operation and no next value', () => {
-    expect(calculate({ total: '3.', next: null, operation: '+' }, '-')).toStrictEqual({ total: '3.', next: null, operation: '-' });
+    expect(
+      calculate({ total: '3.', next: null, operation: '+' }, '-')
+    ).toStrictEqual({ total: '3.', next: null, operation: '-' });
   });
   test('User pressed an operation button and there is an existing operation and a next value', () => {
-    expect(calculate({ total: '3', next: '1', operation: '+' }, '-')).toStrictEqual({ total: '4', next: null, operation: '-' });
+    expect(
+      calculate({ total: '3', next: '1', operation: '+' }, '-')
+    ).toStrictEqual({ total: '4', next: null, operation: '-' });
   });
   test("The user hasn't typed a number yet and no next value, just save the operation", () => {
-    expect(calculate({ total: 0, next: null, operation: null }, '-')).toStrictEqual({ operation: '-' });
+    expect(
+      calculate({ total: 0, next: null, operation: null }, '-')
+    ).toStrictEqual({ operation: '-' });
   });
   test("The user hasn't typed a number yet but with next value, just save the operation", () => {
-    expect(calculate({ total: 0, next: '3', operation: null }, '-')).toStrictEqual({ total: '3', next: null, operation: '-' });
+    expect(
+      calculate({ total: 0, next: '3', operation: null }, '-')
+    ).toStrictEqual({ total: '3', next: null, operation: '-' });
   });
 });
 describe('home page component', () => {
@@ -107,25 +153,19 @@ describe('home page component', () => {
     expect(headerElement).toBeInTheDocument();
   });
   test('renders correctly', () => {
-    const home = renderer
-      .create(<Home />)
-      .toJSON();
+    const home = renderer.create(<Home />).toJSON();
     expect(home).toMatchSnapshot();
   });
 });
 describe('quote page component', () => {
   test('renders correctly', () => {
-    const quote = renderer
-      .create(<Quote />)
-      .toJSON();
+    const quote = renderer.create(<Quote />).toJSON();
     expect(quote).toMatchSnapshot();
   });
 });
 describe('calculator page component', () => {
   test('renders correctly', () => {
-    const calculatePage = renderer
-      .create(<CalculatePage />)
-      .toJSON();
+    const calculatePage = renderer.create(<CalculatePage />).toJSON();
     expect(calculatePage).toMatchSnapshot();
   });
   test('renders header text', () => {
@@ -157,5 +197,29 @@ describe('calculator page component', () => {
     render(<CalculatePage />);
     const ChangeSignButton = screen.getByText('+/-');
     expect(ChangeSignButton).toBeInTheDocument();
+  });
+});
+
+describe('Navlink tests', () => {
+  test('Calculator Link', () => {
+    render(<App />);
+    const calculatorLink = screen.getByText(/Calculator/i);
+    userEvent.click(calculatorLink);
+    expect(screen.getByText(/Lets do some math!/i)).toBeInTheDocument();
+  });
+
+  test('Home Link', () => {
+    render(<App />);
+    const homeLink = screen.getByText(/Home/i);
+    userEvent.click(homeLink);
+    expect(screen.getByText(/Welcome to our page!/i)).toBeInTheDocument();
+  });
+
+  test('Quote Link', () => {
+    render(<App />);
+    const quoteLink = screen.getByText(/Quote/i);
+    userEvent.click(quoteLink);
+    const quotePage = renderer.create(<Quote />).toJSON();
+    expect(quotePage).toMatchSnapshot();
   });
 });

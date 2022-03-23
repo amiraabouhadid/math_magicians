@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Navlink tests Quote Link 1`] = `
+<div
+  className="m-5 p-5 "
+>
+  <h4
+    className="p-5"
+  >
+    
+    <span
+      className="mx-3"
+    >
+      —
+    </span>
+    
+  </h4>
+</div>
+`;
+
 exports[`calculator page component renders correctly 1`] = `
 <div
   className=" container-fluid"
@@ -328,10 +346,10 @@ exports[`home page component renders correctly 1`] = `
     Welcome to our page!
   </h2>
   <p>
-    Lorem ipsum odor amet, consectetuer adipiscing elit. Posuere curae molestie lorem nisl euismod nam ipsum. Ac orci adipiscing parturient mauris, quisque sem placerat varius sollicitudin. Convallis euismod curabitur vel rhoncus platea porttitor arcu imperdiet. Eu turpis quam venenatis egestas ex tristique. Nascetur a phasellus mauris mattis libero natoque. Facilisi in mus ornare phasellus sit eu, urna imperdiet vehicula.
+    Lorem ipsum odor amet, consectetuer adipiscing elit. Natoque pulvinar fringilla vehicula vitae rhoncus congue phasellus pretium. Leo a ullamcorper nam ultrices maximus mattis. At est molestie elit quis pellentesque facilisi? Viverra a ornare morbi ut taciti; nisi semper. Rutrum porttitor nam laoreet non; quis quis primis vulputate porttitor. Dictumst fermentum odio nisi tempus, nisi sagittis litora. Nunc integer dui sem interdum porttitor mollis.
   </p>
   <p>
-    Lorem ipsum odor amet, consectetuer adipiscing elit. Sociosqu malesuada eros nisl suspendisse elit. Porttitor turpis varius tempor vestibulum natoque ridiculus. Consectetur condimentum ut suscipit turpis netus augue. Phasellus augue nullam vivamus dictum sollicitudin vestibulum? Eget a a facilisi fringilla pharetra condimentum augue mauris.
+    Lorem ipsum odor amet, consectetuer adipiscing elit. Ultrices consectetur nascetur maximus condimentum; vivamus proin. Hac blandit sodales suspendisse adipiscing aliquam quisque morbi felis natoque. Aliquet non odio conubia convallis quisque. Urna ipsum porttitor imperdiet fringilla tincidunt; pharetra efficitur fermentum augue. Fringilla erat pretium donec rutrum duis eros erat. Turpis venenatis pharetra leo parturient aliquam lobortis felis. Ex primis sapien lacus faucibus est pretium lectus porta. Rutrum velit vitae consequat, nisl donec fusce ante morbi. Magna tempor non magnis; consectetur felis orci proin neque.
   </p>
 </div>
 `;
