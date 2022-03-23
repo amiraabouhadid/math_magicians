@@ -13,7 +13,7 @@
 
 ## Live demo
 
-You can visit live version via [link]()
+You can visit live version via [link](https://amiraabouhadid.github.io/math_magicians/)
 
 ## Getting Started
 
