@@ -13,8 +13,9 @@
 
 ## Live demo
 
-You can visit live version via [github pages link](https://amiraabouhadid.github.io/math_magicians/)
-[heroku link](https://its-just-another-calculator.herokuapp.com/)
+You can visit live version via:
+ - [github pages link](https://amiraabouhadid.github.io/math_magicians/)
+ - [heroku link](https://its-just-another-calculator.herokuapp.com/)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
